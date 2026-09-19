@@ -1,0 +1,14 @@
+/* Shared dashboard foundation for the five role portals.
+   Portal-specific styles should be added in each portal as the system grows. */
+
+.dashboard-layout { min-height:100vh; display:grid; grid-template-columns:260px 1fr; background:#f8fafc; }
+.dashboard-sidebar { background:#0f172a; color:#cbd5e1; padding:20px; }
+.dashboard-main { min-width:0; }
+.dashboard-topbar { min-height:72px; display:flex; align-items:center; justify-content:space-between; padding:0 28px; background:#fff; border-bottom:1px solid #e2e8f0; }
+.dashboard-content { padding:28px; }
+.dashboard-card { background:#fff; border:1px solid #e2e8f0; border-radius:16px; box-shadow:0 4px 16px rgba(15,23,42,.05); padding:20px; }
+@media (max-width:850px) {
+  .dashboard-layout { grid-template-columns:1fr; }
+  .dashboard-sidebar { display:none; }
+  .dashboard-topbar,.dashboard-content { padding-inline:16px; }
+}
